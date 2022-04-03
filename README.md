@@ -7,12 +7,15 @@ https://kokaline.github.io/Home-work-1/
 https://www.figma.com/file/XeWzrTMu0ZyFGeHNAWojBO/Task1?node-id=23%3A18
 
 Требования:
-•	Использование семантических элементов HTML 5
-•	Использование технологии CSS 3
-•	Использование Flexbox
-•	Использование media-query
-
+<ul>
+  <li>Использование семантических элементов HTML 5</li>
+  <li>Использование технологии CSS 3</li>
+  <li>Использование Flexbox</li>
+  <li>Использование media-query</li>
+</ul>
 Ограничение:
-•	Запрещено использовать JavaScript
-•	Запрещено использовать свойства position, float
-•	Запрещено использовать сторонние CSS библиотеки (Bootstrap и др.)
+<ul>
+  <li>Запрещено использовать JavaScript</li>
+  <li>Запрещено использовать свойства position, float</li>
+  <li>Запрещено использовать сторонние CSS библиотеки (Bootstrap и др.)</li>
+</ul>
