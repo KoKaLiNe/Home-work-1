@@ -1,12 +1,13 @@
 @import './components/reset';
 @import './components/colors';
 @import './components/btn';
+@import './components/mixins';
 
 
 /* Body */
 body {
+   @include font(14px);
     font-family: Arial, sans-serif;
-    font-size: 14px;
 }
 
 .container {
@@ -48,9 +49,8 @@ body {
         display: flex;
         align-items: center;
 
-        font-style: italic;
+        @include font(null, $fontColor, null,  italic);
         text-decoration: none;
-        color: $font-color;
     }
 
     &__link:hover {
@@ -71,9 +71,10 @@ body {
         padding-bottom: 5px;
         margin-bottom: 9px;
 
+        @include font(12px, null, 400,  null);
         font-family: 'Verdana', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
+        // font-weight: 400;
+        // font-size: 12px;
         text-transform: uppercase;
 
         border-bottom: 1px dashed #E5E5E5;
@@ -82,8 +83,9 @@ body {
     &__text {
         margin-bottom: 15px;
 
-        font-style: italic;
-        font-size: 10px;
+        @include font(10px, null, null,  italic);
+        // font-style: italic;
+        // font-size: 10px;
         line-height: 19px;
     }      
 }
@@ -105,23 +107,25 @@ body {
 
 .baner {
     &__img {
-        padding-top: 49.66%;
+        padding-top: calc((445px - (50px + 42px + 69px)) / 896px * 100%); // высота картинки - (ширина banner__header + banner__text + banner__inner padding-bottom)) / ширина картинки * 100%
+        padding-bottom: 69px;
         background: url(../img/main/slider-img.jpg) center/cover no-repeat;
     }
-
+    
     &_inner {
         display: flex;
         flex-direction: column;
         margin-top: -150px;
     }
-
+    
     &__header {
         width: 272px;
         padding: 12px 27px 12px 12px;  
-
-        font-style: italic;
-        font-size: 22px;
-        font-weight: 400;
+        
+        @include font(22px, null, 400, italic);
+        // font-style: italic;
+        // font-size: 22px;
+        // font-weight: 400;
 
         background-color: #fff;
         color: #000;
@@ -129,13 +133,14 @@ body {
 
     &__text {
         width: 487px;
-        padding: 14px 0 14px 24px;
-
-        font-style: italic;
-        font-size: 14px;
+        padding: 13px 0 13px 24px;
+        
+        @include font(14px, #ffffff, null, italic);
+        // font-style: italic;
+        // font-size: 14px;
+        // color: #fff;
 
         background-color: #000;
-        color: #fff;
     }
 }
 
@@ -146,30 +151,33 @@ body {
     &__item {
         padding: 22px 0 22px 20px;
         flex: 1 1 0;
-        background-color: $block-color;
+        background-color: $blockColor;
         border-left: 1px solid #F9FBFB;
         cursor: pointer;
     }
 
     &__item--active{
-        background-color: $block-color-active;
-        border-left: 1px solid $block-color-active;
+        background-color: $blockColorActive;
+        border-left: 1px solid $blockColorActive;
         cursor: default;
     }
 
     &__btn {
-        color: $font-color;
+        color: $fontColor;
     }
 
     &__item-header {
-        font-size: 18px;
-        font-weight: 400;
+        @include font(18px, null, 400, null)
+        // font-size: 18px;
+        // font-weight: 400;
     }
 
     &__text {
         display: block;
-        font-style: italic;
-        font-size: 10px;
+
+        @include font(10px, null, null, italic);
+        // font-style: italic;
+        // font-size: 10px;
     }
 }
 
@@ -251,12 +259,12 @@ body {
     
     &__header {
         margin-bottom: 9px;
-    
-        font-weight: 400;
-        font-size: 16px;
+
+        @include font(16px, $fontColor, 400, null);
+        // font-weight: 400;
+        // font-size: 16px;
+        // color: $fontColor;
         line-height: 21px;
-    
-        color: $font-color;
     }
     
     &__text {
@@ -276,7 +284,7 @@ body {
     &__link {
         text-decoration: none;
     
-        color: $font-color;
+        color: $fontColor;
     }
 }
 
@@ -308,15 +316,16 @@ body {
     }
 
     &__link {
-        font-size: 12px;
+        @include font(12px, $fontColor, null, null);
+        // font-size: 12px;
+        // color: $fontColor;
         text-decoration: none;
-    
-        color: $font-color;
     }
 
     &__text {
-        font-size: 12px;
-        color: #E5E5E5;
+        @include font(12px, #E5E5E5, null, null); // size, color, weight, style
+        // font-size: 12px;
+        // color: #E5E5E5;
     }
 
     &__socials--item {
@@ -328,7 +337,8 @@ body {
 
 /* Responsive */
 
-/* < 1176px */
+/* Screen (992 - 1176px) */
+
 @media screen and (max-width: 1176px) {
     .container {
         max-width: 896px;
@@ -339,7 +349,8 @@ body {
     }
 
     .baner__img {
-        padding-top: 63.5%;
+        padding-top: calc((445px - (50px + 42px + 69px)) / 712px * 100%); // высота картинки - (ширина banner__header + banner__text + banner__inner padding-bottom)) / ширина картинки * 100%
+
     }
 
     .tabs {
@@ -367,7 +378,8 @@ body {
     }
 }
 
-/* 992px - 1175px */
+
+/* Screen (768 - 992px) */
 
 @media screen and (max-width: 992px) {
     .container {
@@ -424,9 +436,7 @@ body {
     }
 }
 
-
-/* 768px - 991px */
-
+/* Screen (480 - 768px) */ 
 @media screen and (max-width: 768px) {
     .container {
         max-width: 560px;
@@ -450,8 +460,13 @@ body {
     }
 
     .baner {
+        &__img {
+            padding-top: calc((353px - (50px + 42px)) / 545px * 100%); // высота картинки - (ширина banner__header + banner__text + banner__inner padding-bottom)) / ширина картинки * 100%
+            padding-bottom: 0;            
+        }
+
         &__inner {
-            margin-top: -94px;
+            margin-top: -92px;
         }
 
         &__header {
@@ -506,11 +521,16 @@ body {
     }
 }
 
-/* < 480px */
+/* Screen (less 480px) */
 
 @media screen and (max-width: 480px) {
     .container {
         max-width: 429px;
+    }
+
+    .baner__img {
+        padding-top: calc((373px - (50px + 42px)) / 480px * 100%); // высота картинки - (ширина banner__header + banner__text + banner__inner padding-bottom)) / ширина картинки * 100%
+        padding-bottom: 0;
     }
 
     .aside{
