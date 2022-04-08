@@ -1,6 +1,22 @@
-@mixin font ($size: false, $colour: false, $weight: false,  $style: false) {
-    @if $size { font-size: $size; }
-    @if $colour { color: $colour; }
-    @if $weight { font-weight: $weight; }
-    @if $style { font-style: $style; }
+// @mixin font ($size: false, $colour: false, $weight: false,  $style: false) {
+//     @if $size { font-size: $size; }
+//     @if $colour { color: $colour; }
+//     @if $weight { font-weight: $weight; }
+//     @if $style { font-style: $style; }
+//   }
+
+  @mixin font ($size: false, $style: false, $weight: false, $lh: false) {
+    @if $size {
+      font-size: $size;
+    }
+    @if $style {
+      font-style: $style;
+    }
+    @if $weight {
+      font-weight: $weight;
+    }
+    @if $lh {
+      line-height: $lh;
+    }
   }
+
