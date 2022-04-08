@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +16,8 @@ a {
   align-items: center;
   padding: 7px 5px 7px 7px;
   font-size: 10px;
-  color: #34ACA7;
   font-style: italic;
+  color: #34ACA7;
   text-decoration: none;
   width: 140px;
   height: 30px;
@@ -43,6 +44,9 @@ a {
 body {
   font-size: 14px;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
@@ -50,8 +54,7 @@ body {
   justify-content: space-between;
   width: 100%;
   max-width: 1088px;
-  padding: 46px 0 0 0;
-  margin: 0 auto;
+  padding-top: 46px;
 }
 .container--footer {
   display: block;
@@ -61,8 +64,6 @@ body {
 /* aside */
 .aside {
   max-width: 140px;
-  margin-left: 8px;
-  margin-right: 44px;
 }
 .aside__logo {
   display: block;
@@ -77,8 +78,8 @@ body {
 .aside__link {
   display: flex;
   align-items: center;
-  color: #34ACA7;
   font-style: italic;
+  color: #34ACA7;
   text-decoration: none;
 }
 .aside__link:hover {
@@ -115,7 +116,7 @@ body {
 }
 
 .main {
-  flex-grow: 1;
+  max-width: 896px;
 }
 
 .slider {
@@ -126,19 +127,21 @@ body {
 .baner__img {
   padding-top: 31.6964285714%;
   padding-bottom: 69px;
+  /* убрать*/
+  /* добавить фиксированную высоту*/
   background: url(../img/main/slider-img.jpg) center/cover no-repeat;
 }
-.baner_inner {
+.baner__inner {
+  /* добавить паддинг-топ или боттом */
   display: flex;
   flex-direction: column;
-  margin-top: -150px;
 }
 .baner__header {
   width: 272px;
   padding: 12px 27px 12px 12px;
   font-size: 22px;
-  font-weight: 400;
   font-style: italic;
+  font-weight: 400;
   background-color: #fff;
   color: #000;
 }
@@ -146,9 +149,9 @@ body {
   width: 487px;
   padding: 13px 0 13px 24px;
   font-size: 14px;
-  color: #ffffff;
   font-style: italic;
-  background-color: #000;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .tabs {
@@ -224,8 +227,7 @@ body {
   margin-bottom: 26px;
 }
 .cards__item {
-  width: 25%;
-  margin-right: 23px;
+  width: 23%;
   letter-spacing: -0.02em;
   line-height: 20px;
 }
@@ -241,8 +243,8 @@ body {
 .cards__header {
   margin-bottom: 9px;
   font-size: 16px;
-  color: #34ACA7;
   font-weight: 400;
+  color: #34ACA7;
   line-height: 21px;
 }
 .cards__text {
@@ -299,12 +301,16 @@ body {
     max-width: 896px;
   }
 
+  .main {
+    max-width: 712px;
+  }
+
   .slider {
     margin-bottom: 18px;
   }
 
   .baner__img {
-    padding-top: 39.8876404494%;
+    padding-top: 40.0280898876%;
   }
 
   .tabs__item {
@@ -434,7 +440,6 @@ body {
   }
   .cards__item {
     width: 47%;
-    margin-right: 0;
     margin-bottom: 15px;
   }
   .cards__text {

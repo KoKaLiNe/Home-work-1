@@ -1,0 +1,235 @@
+
+/* Responsive */
+
+/* Screen (992 - 1176px) */
+
+@media screen and (max-width: 1176px) {
+    .container {
+        max-width: 896px;
+    }
+    .main {
+        max-width: 712px;
+    }
+
+    .slider {
+        margin-bottom: 18px;
+    }
+
+    .baner__img {
+        padding-top: calc((445px - 160px) / 712px * 100%); // высота картинки - (ширина banner__header + banner__text + banner__inner padding-bottom)) / ширина картинки * 100%
+    }
+
+    .tabs {
+        &__item {
+            padding: 10px 0;
+
+            &-header {
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+
+        &__text {
+            display: none;
+        }
+    }
+
+    .subscribe {
+        margin-bottom: 18px;
+
+        &__text {
+            margin-right: 4px;
+            max-width: 363px;
+        }
+    }
+}
+
+
+/* Screen (768 - 992px) */
+
+@media screen and (max-width: 992px) {
+    .container {
+        flex-direction: column;
+
+        max-width: 716px;
+        padding: 20px 0 0 0;
+
+        &--footer {
+            padding-top: 0;
+        }
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        max-width: 710px;
+        margin: 0 0 51px 0;
+
+        &__logo {
+            margin: 0;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__item {
+            width: 100px;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__link {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__img {
+            margin: 0 0 12px 0; 
+        }
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .cards__text {
+        max-height: 164px;
+    }
+}
+
+/* Screen (480 - 768px) */ 
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 560px;
+    }
+
+    .aside {
+        &__img {
+            display: none;
+        }
+
+        &__item {
+            width: 100%;
+            margin-right: 16px;
+            padding: 0;
+            white-space: nowrap;
+        }
+    }
+
+    .slider {
+        margin-bottom: 39px;
+    }
+
+    .baner {
+        &__img {
+            padding-top: calc((353px - 92px) / 545px * 100%); // высота картинки - (ширина banner__header + banner__text + banner__inner padding-bottom)) / ширина картинки * 100%
+            padding-bottom: 0;            
+        }
+
+        &__inner {
+            margin-top: -92px;
+        }
+
+        &__header {
+            opacity: 0.6;
+            width: 100%;
+        }
+
+        &__text {
+            width: 100%;
+        }
+    }
+
+    .tabs__item {
+        display: none;
+    }
+    
+    .subscribe {
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__inner {
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            max-width: 100%;
+        }
+
+        &__form {
+            width: 100%;
+        }
+
+        &__input {
+            margin-right: 36px;
+        }
+
+    }
+
+    .cards {
+        flex-wrap: wrap;
+
+        &__item {
+            width: 47%;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            max-height: 100px;
+        }
+    }
+}
+
+/* Screen (less 480px) */
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 429px;
+    }
+
+    .baner__img {
+        padding-top: calc((373px - 92px) / 480px * 100%); // высота картинки - (ширина banner__header + banner__text + banner__inner padding-bottom)) / ширина картинки * 100%
+        padding-bottom: 0;
+    }
+
+    .aside{
+        flex-direction: column-reverse;
+
+        margin-bottom: 42px;
+
+        &__list {
+            margin-bottom: 34px;
+        }
+    }
+
+    .slider {
+        margin-bottom: 29px;
+    }
+
+    .subscribe {
+        padding-bottom: 32px;
+        margin-bottom: 29px;
+    }
+
+    .cards {
+        margin-bottom: 22px;
+
+        &__item {
+            width: 100%;
+            margin: 0 52.5px 29px;
+
+            &:last-child {
+                margin: 0 52.5px 0;
+            }
+        }
+    }
+    
+    .footer {
+        padding-bottom: 23px;
+    }
+}
