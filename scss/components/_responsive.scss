@@ -23,13 +23,13 @@
         &__item {
             padding: 10px 0;
 
-            &-header {
+            
+        }
+        &__inner-header {
                 font-size: 14px;
                 text-align: center;
             }
-        }
-
-        &__text {
+        &__inner-text {
             display: none;
         }
     }
@@ -66,7 +66,7 @@
         align-items: center;
 
         max-width: 710px;
-        margin: 0 0 51px 0;
+        margin: 0 10px 51px;
 
         &__logo {
             margin: 0;
@@ -109,6 +109,9 @@
     }
 
     .aside {
+        &__logo {
+            margin-right: 5px;
+        }
         &__img {
             display: none;
         }
@@ -123,6 +126,10 @@
 
     .slider {
         margin-bottom: 39px;
+
+        &__prev, &__next {
+            display: block;
+        }
     }
 
     .baner {
@@ -209,6 +216,10 @@
 
     .slider {
         margin-bottom: 29px;
+
+        &__prev, &__next {
+            top: 35%;
+        }
     }
 
     .subscribe {
